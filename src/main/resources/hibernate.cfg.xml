@@ -7,15 +7,22 @@
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="connection.username">root</property>
 		<property name="connection.password">root</property>
-		<property name="connection.url">jdbc:mysql://localhost:3306/prueba</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/DONPEPE?createDatabaseIfNotExist=true</property>
 		 <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="show_sql">true</property>
 		
 		<!-- ESTO CREA LA BASE A PARTIR DE LAS ENTIDADES -->
+		<!--  <property name="hibernate.hbm2ddl.auto">update</property>-->
 		<property name="hibernate.hbm2ddl.auto">create</property>
 		
-		<mapping class="utn.EjemploHibernateJpa.dominio.Botella"></mapping>
-		<mapping class="utn.EjemploHibernateJpa.dominio.Ingrediente"></mapping>
-		
+		<mapping class="utn.edu.avanzada2.ElectronicaDonPepe.dominio.ComisionPorProducto"></mapping>
+		<mapping class="utn.edu.avanzada2.ElectronicaDonPepe.dominio.ComisionPorVentas"></mapping>
+		<mapping class="utn.edu.avanzada2.ElectronicaDonPepe.dominio.ItemVentas"></mapping>
+		<mapping class="utn.edu.avanzada2.ElectronicaDonPepe.dominio.Producto"></mapping>
+		<mapping class="utn.edu.avanzada2.ElectronicaDonPepe.dominio.Rol"></mapping>
+		<mapping class="utn.edu.avanzada2.ElectronicaDonPepe.dominio.Usuario"></mapping>
+		<mapping class="utn.edu.avanzada2.ElectronicaDonPepe.dominio.Vendedor"></mapping>
+		<mapping class="utn.edu.avanzada2.ElectronicaDonPepe.dominio.Campania"></mapping>
+		<mapping class="utn.edu.avanzada2.ElectronicaDonPepe.dominio.Ventas"></mapping>
 	</session-factory>
 </hibernate-configuration>
